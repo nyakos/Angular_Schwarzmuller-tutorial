@@ -4,3 +4,22 @@
 >
   Server {{ serverName }} is {{ getServerStatus() }}
 </p>
+<hr />
+<div style="display: flex">
+  <button class="btn btn-secondary" (click)="onToggleDetails($event)">
+    Display details
+  </button>
+  <p *ngIf="isDetailsVisible">Secret Password: {{ password }}</p>
+</div>
+<p
+  *ngFor="let logItem of clickLog; let i = index"
+  [ngStyle]="{
+    backgroundColor: getBlueBackgroundColor(i),
+  }"
+  [ngClass]="{
+    online: getBlueBackgroundColor(i) === 'blue'
+  }"
+>
+  {{ logItem }}
+</p>
+<hr />

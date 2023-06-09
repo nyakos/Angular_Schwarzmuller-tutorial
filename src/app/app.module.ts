@@ -15,13 +15,10 @@ import { SuccessAlert } from './success-alert/success-alert.component';
     ServerCopmonent,
     ServersComponent,
     WarningAlert,
-    SuccessAlert
+    SuccessAlert,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
